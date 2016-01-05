@@ -9,3 +9,9 @@ FlowRouter.route('/project/:id', {
     ReactLayout.render(App, {content: <Project />});
   }
 });
+
+FlowRouter.route('/add-project', {
+  action() {
+    ReactLayout.render(App, {content: <Form />});
+  }
+});
