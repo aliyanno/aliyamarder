@@ -11,11 +11,12 @@ Home = React.createClass({
 
   renderProjects() {
     return this.data.projects.map((project) => {
-      return <img src={project.url}/>
+      return <p>{project.title}</p>
     })
   },
 
   render() {
+    console.log(this.data.projects);
     return (
       <div>
         <h2>Go to project</h2>

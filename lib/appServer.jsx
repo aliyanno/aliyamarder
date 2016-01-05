@@ -13,6 +13,17 @@ if (Meteor.isServer) {
     // code to run on server at startup
     // check all the projects in server/projects
     // if a project id is not in the collection Projects, insert it in
+    let rose = JSON.parse(Assets.getText('projects/chewse_dashboard/meta.json'));
+    let companions = [rose];
+
+    console.log(companions);
+
+    _.each(companions, function(companion) {
+      Projects.insert(companion);
+    });
+
+    console.log(Projects);
+
   });
 
   // if received a call for home data, return home collection
